@@ -7,7 +7,7 @@
 > **Shoot 'em all, reach your highest point!'**
 
 
-**Part of Game Development (CSCE604121) 1-Week Mid-Test Game Jam**
+**Part of Game Development (CSCE604121) 1-Week Mid-Test Game Jam Computer Science, Universitas Indonesia 2019**
 
 Feel the real taste of Rocky's space adventure, with aliens and monsters along their way. Shoot as many monsters as possible and protect Rocky's spaceship by dodging their bullets! Remember that you only have 4 shields for the entire adventure.
 
