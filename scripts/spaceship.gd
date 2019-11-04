@@ -2,6 +2,9 @@ extends Area2D
 
 var lives = 4 setget set_lives
 const laser_scene = preload("res://scenes/laser-ship.tscn")
+const red_flash_scene = preload("res://scenes/red-flash.tscn")
+
+signal lives_changed
 
 func _ready():
 	set_process(true)
@@ -37,7 +40,12 @@ func create_laser(pos):
 	pass
 
 func set_lives(new_value):
+	if new_value < lives:
+		utils.main_node.add_child(red_flash_scene.instance())
+		
 	lives = new_value
+	emit_signal("lives_changed", lives)
+	
 	if lives <= 0:
 		queue_free()
 	pass

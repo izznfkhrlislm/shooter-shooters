@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Shooter Shooters"
-run/main_scene="res://stages/base-stage.tscn"
+run/main_scene="res://stages/main-menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

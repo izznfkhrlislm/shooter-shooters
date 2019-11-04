@@ -18,7 +18,8 @@ func _process(delta):
 func set_lives(new_value):
 	lives = new_value
 	if lives <= 0:
-		queue_free()
+		utils.find_specific_node("score").score += 5
+		queue_free() 
 	pass
 
 func _on_area_entered(other_area):
