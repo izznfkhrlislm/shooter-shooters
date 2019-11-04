@@ -1,9 +1,12 @@
 extends Area2D
 
+var lives = 4 setget set_lives
 const laser_scene = preload("res://scenes/laser-ship.tscn")
 
 func _ready():
 	set_process(true)
+	add_to_group("ship")
+	
 	yield(utils.create_timer(0.5), "timeout")
 	shoot()
 	pass
@@ -32,4 +35,9 @@ func create_laser(pos):
 	laser.position = pos
 	utils.main_node.add_child(laser)
 	pass
-	
+
+func set_lives(new_value):
+	lives = new_value
+	if lives <= 0:
+		queue_free()
+	pass

@@ -10,6 +10,7 @@ extents = Vector2( 16, 16 )
 [node name="enemy_2" instance=ExtResource( 1 )]
 position = Vector2( 49.9996, 33.5224 )
 script = ExtResource( 2 )
+lives = 4
 velocity = Vector2( 50, 50 )
 
 [node name="enemy-sprite" parent="." index="0"]

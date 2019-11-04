@@ -19,10 +19,10 @@ func create_timer(wait_time):
 	return timer
 	pass
 
-func choose(choises):
+func choose(choices):
 	randomize()
-	var rand_index = randi() % choises.size()
-	return choises[rand_index]
+	var rand_index = randi() % choices.size()
+	return choices[rand_index]
 	pass
 
 func find_specific_node(node):
