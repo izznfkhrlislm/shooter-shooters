@@ -6,6 +6,7 @@ export var velocity = Vector2()
 func _ready():
 	set_process(true)
 	add_to_group("enemies")
+	connect("area_entered", self, "_on_area_entered")
 	pass # Replace with function body.
 
 func _process(delta):
@@ -17,5 +18,11 @@ func _process(delta):
 func set_lives(new_value):
 	lives = new_value
 	if lives <= 0:
+		queue_free()
+	pass
+
+func _on_area_entered(other_area):
+	if other_area.is_in_group("ship"):
+		other_area.lives -= 1
 		queue_free()
 	pass
