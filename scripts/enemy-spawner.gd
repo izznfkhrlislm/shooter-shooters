@@ -1,6 +1,10 @@
 extends Node
 
 const enemy_sprite = preload("res://scenes/enemy_1.tscn")
+const enemy_sprites = [
+	preload("res://scenes/enemy_1.tscn"),
+	preload("res://scenes/enemy_2.tscn")
+]
 
 func _ready():
 	spawnEnemy()
@@ -10,7 +14,7 @@ func spawnEnemy():
 	while true:
 		randomize()
 		
-		var newEnemy = enemy_sprite.instance()
+		var newEnemy = utils.choose(enemy_sprites).instance()
 		var newEnemyPosition = Vector2()
 		
 		newEnemyPosition.x = rand_range(0+16, utils.view_size.x-16)

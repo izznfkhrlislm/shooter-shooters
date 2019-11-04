@@ -15,3 +15,11 @@ texture = ExtResource( 2 )
 
 [node name="spaceship-collisionshape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="weapon" type="Node2D" parent="."]
+
+[node name="weapon-position-left" type="Position2D" parent="weapon"]
+position = Vector2( -12, -8 )
+
+[node name="weapon-position-right" type="Position2D" parent="weapon"]
+position = Vector2( 12, -8 )
